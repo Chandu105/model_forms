@@ -10,8 +10,15 @@ class WebpageForm(forms.ModelForm):
     class Meta:
         model=Webpage 
         fields='__all__'
+        #fields=['name','url']
+        #exclude=['url']
+        labels={'topic_name':'TN'}
+        widgets={'url':forms.PasswordInput}
 
 class AccessRecordForm(forms.ModelForm):
     class Meta:
         model=AccessRecord
         fields='__all__'
+        #exclude=['author']
+       
+        
